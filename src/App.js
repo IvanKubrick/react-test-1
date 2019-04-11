@@ -1,14 +1,14 @@
-import React, { Component } from "react";
-import "./App.css";
+import React, { Component } from 'react';
+import './App.css';
 
-import Person from "./Person/Person";
+import Person from './Person/Person';
 
 class App extends Component {
   state = {
     persons: [
-      { id: "0", name: "Ivan", age: "25" },
-      { id: "1", name: "Max", age: "28" },
-      { id: "2", name: "Alex", age: "33" }
+      { id: '0', name: 'Ivan', age: '25' },
+      { id: '1', name: 'Max', age: '28' },
+      { id: '2', name: 'Alex', age: '33' }
     ],
     showPersons: true
   };
@@ -40,10 +40,10 @@ class App extends Component {
 
   render() {
     const style = {
-      backgroundColor: "green",
-      border: "1px solid blue",
-      padding: "8px",
-      cursor: "pointer"
+      backgroundColor: 'green',
+      border: '1px solid blue',
+      padding: '8px',
+      cursor: 'pointer'
     };
 
     let persons = null;
@@ -65,21 +65,21 @@ class App extends Component {
         </div>
       );
 
-      style.backgroundColor = "red";
+      style.backgroundColor = 'red';
     }
 
     const classes = [];
     if (this.state.persons.length <= 2) {
-      classes.push("red");
+      classes.push('red');
     }
     if (this.state.persons.length <= 1) {
-      classes.push("bold");
+      classes.push('bold');
     }
 
     return (
       <div className="App">
         <h1>React App</h1>
-        <p className={classes.join(" ")}>This is working!</p>
+        <p className={classes.join(' ')}>This is working!</p>
         <button onClick={this.togglePersonsHandler} style={style}>
           Toggle persons
         </button>
